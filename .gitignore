@@ -8,3 +8,4 @@ postcss.config.js
 root.css
 style.css
 CNAME
+dist/js/plugins/php/submit.php

@@ -20,17 +20,17 @@ $mail = new PHPMailer();
 $mail->SMTPDebug = 0; 
 $mail->isSMTP();
 // $mail->Host = '';  // Specify main and backup SMTP servers
-$mail->Host = '	free.mboxhosting.com';
+$mail->Host = 'mail.gruva.net';
  $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'contacto@diarpu.ga';                 // SMTP username
-$mail->Password = '74291074d';                           // SMTP password
+$mail->Username = 'pe@gruva.net';                 // SMTP username
+$mail->Password = 'pe.gruv@123456';                           // SMTP password
 $mail->SMTPSecure = 'tls';
 $mail->Port = 25;
 // $mail->Port = 587;                                   // TCP port to connect to
 $mail->CharSet = 'UTF8';
 
-$mail->setFrom('contacto@diarpu.ga', 'Gruva');  // Host
-$mail->addAddress('danilhamsik@gmail.com', 'Diego');
+$mail->setFrom('pe@gruva.net', 'Gruva Perú');  // Host
+$mail->addAddress('danilhamsik@gmail.com');
 $mail->addReplyTo($email,$name);
 
     //Content
@@ -917,6 +917,7 @@ $mailContent = '
 $mail->Body    = $mailContent ;
 
     if($mail->send()){
+        echo 'Tu envío ha sido exitoso. En breve nos estaremos comunicando contigo.';
     }   	
     else{
         echo 'Ups, no se pudo enviar';

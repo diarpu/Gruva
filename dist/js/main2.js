@@ -23,8 +23,8 @@ $(function () {
             })
             .done(function (response) {
                 // Make sure that the formMessages div has the 'success' class.
-                // $(formMessages).removeClass('error');
-                // $(formMessages).addClass('success');
+                $(formMessages).removeClass('error');
+                $(formMessages).addClass('success');
                 document.getElementById("form-messages").style.display = "block";
 
                 // Set the message text.
@@ -38,13 +38,13 @@ $(function () {
                 // document.getElementById("check-term").checked = false;
                 document.getElementById("submit").innerHTML = "Enviar";
                 setTimeout( function() {document.getElementById("submit").toggleAttribute('disabled', false);});
-                // setTimeout( function() {document.getElementById("form-messages").style.display = "none" ;}, 4000 );
-                setTimeout( function() {window.location.href = '/';});
+                setTimeout( function() {document.getElementById("form-messages").style.display = "none" ;}, 4000 );
+                // setTimeout( function() {window.location.href = '/';});
             })
             .fail(function (data) {
                 // Make sure that the formMessages div has the 'error' class.
-                // $(formMessages).removeClass('success');
-                // $(formMessages).addClass('error');
+                $(formMessages).removeClass('success');
+                $(formMessages).addClass('error');
 
                 // Set the message text.
                 if (data.responseText !== '') {

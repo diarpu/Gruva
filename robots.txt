@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pe.gruva.net/sitemap.xml
